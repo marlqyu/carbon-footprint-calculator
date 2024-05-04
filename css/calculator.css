@@ -1,23 +1,41 @@
-.top {
-    width: 1920px;
-    height: 1200px !important;
-    background-image: url("carbon-footprint-calculator/img/grass.png") !important;
-    background-size: cover !important;
-    position: relative !important;
+body {
+    overflow-x: hidden;
+    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%) !important;
 }
 
-.top::before {
-    content: "" !important;
+.sky, .mountain, .grass {
     position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%) !important;
-    z-index: -1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: -10px;!important;
 }
-.grass {
-    background-image: url("carbon-footprint-calculator/img/grass.png");
-    background-size: cover;
-    z-index: 1;
+
+.sky img {
+    z-index: 1 !important;
+    margin-top: -300px !important;
+}
+
+.mountain img {
+    z-index: 2 !important;
+    margin-top: 164px !important;
+}
+
+.grass img {
+    z-index: 3 !important;
+    margin-top: 468px !important;
+}
+.main-content {
+    background: rgba(11, 29, 38, 1);
+    width: 1920px;
+    height: 4600px;
+    top: -512px;
+    left: -720px;
+    margin-left: -10px;!important;
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.2);
+}
+.zalivka{
+    width: 1920px;
+    height: 700px;
+    padding-top: 1200px;
+    background: /*linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);*/
 }
