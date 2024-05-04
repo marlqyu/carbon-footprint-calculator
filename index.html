@@ -13,7 +13,9 @@
 
 	<div class="logo" style="background-image: url(img/logo.svg);"></div>
 
+
 	<section class="layers">
+
 		<div class="layers__container">
 			<div class="layers__item layer-1" style="background-image: url(img/layer-1.jpg);"></div>
 			<div class="layers__item layer-2" style="background-image: url(img/layer-2.png);"></div>
@@ -21,7 +23,7 @@
 				<div class="hero-content">
 					<h1>Measure Your Impact</h1>
 					<div class="hero-content__p">Find your eco-friendly weather solutions in seconds. Track weather patterns responsibly with Weather Alternative Projects. Start calculating now for a greener tomorrow!</div>
-					<button class="button-start" onclick="location.href='calculator.html'">Make a Difference</button>
+					<p class="button-start">Make a Difference!</p>
 				</div>
 			</div>
 			<div class="layers__item layer-4">
@@ -32,22 +34,28 @@
 		</div>
 	</section>
 
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <form id="loginForm">
-      <h2>Login</h2>
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <input type="submit" value="Login">
-    </form>
-    <form id="registerForm">
-      <h2>Register</h2>
-      <input type="text" id="newUsername" placeholder="Username" required>
-      <input type="password" id="newPassword" placeholder="Password" required>
-      <input type="submit" value="Register">
-    </form>
-  </div>
+<div class="auth-buttons">
+    <button id="register-button">Register</button>
+    <button id="login-button">Login</button>
 </div>
+
+<div id="register-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <input type="text" id="register-username" placeholder="Username">
+        <input type="password" id="register-password" placeholder="Password">
+        <button id="submit-register">Register</button>
+    </div>
+</div>
+
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="submit-login">Login</button>
+    </div>
+</div>
+
 </body>
 </html>

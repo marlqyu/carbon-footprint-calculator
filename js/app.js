@@ -7,34 +7,46 @@ document.addEventListener('mousemove', e => {
  })
 })
 
-var modal = document.getElementById("myModal");
-var btn = document.querySelector(".button-start");
-var span = document.getElementsByClassName("close")[0];
+// Get modal elements
+var registerModal = document.getElementById('register-modal');
+var loginModal = document.getElementById('login-modal');
+var registerButton = document.getElementById('register-button');
+var loginButton = document.getElementById('login-button');
+var closeElements = document.getElementsByClassName('close');
 
-function toggleModal(displayStatus) {
+function toggleModal(modal, displayStatus) {
   modal.style.display = displayStatus;
 }
 
-btn.onclick = function() {
-  toggleModal("block");
+registerButton.onclick = function() {
+  toggleModal(registerModal, "block");
 }
 
-span.onclick = function() {
-  toggleModal("none");
+loginButton.onclick = function() {
+  toggleModal(loginModal, "block");
 }
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    toggleModal("none");
+for (var i = 0; i < closeElements.length; i++) {
+  closeElements[i].onclick = function() {
+    toggleModal(registerModal, "none");
+    toggleModal(loginModal, "none");
   }
 }
 
-document.getElementById('registerForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  var username = document.getElementById('newUsername').value;
-  var password = document.getElementById('newPassword').value;
+window.onclick = function(event) {
+  if (event.target == registerModal) {
+    toggleModal(registerModal, "none");
+  }
+  if (event.target == loginModal) {
+    toggleModal(loginModal, "none");
+  }
+}
 
-  // Form validation
+document.getElementById('submit-register').addEventListener('click', function(event) {
+  event.preventDefault();
+  var username = document.getElementById('register-username').value;
+  var password = document.getElementById('register-password').value;
+
   if (!username || !password) {
     alert('All fields are required!');
     return;
@@ -45,33 +57,29 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     return;
   }
 
-  // Check if the username already exists
   if (localStorage.getItem(username)) {
     alert('Username already exists!');
     return;
   }
 
-  // Store the user's password under their username
   localStorage.setItem(username, password);
   alert('Registration successful!');
-  window.location.href = 'calculator.html'; // Redirect to calculator.html
+  window.location.href = 'calculator.html';
 });
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('submit-login').addEventListener('click', function(event) {
   event.preventDefault();
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
+  var username = document.getElementById('login-username').value;
+  var password = document.getElementById('login-password').value;
 
-  // Form validation
   if (!username || !password) {
     alert('All fields are required!');
     return;
   }
 
-  // Check if the entered password matches the stored password
   if (password === localStorage.getItem(username)) {
     alert('Login successful!');
-    window.location.href = 'calculator.html'; // Redirect to calculator.html
+    window.location.href = 'calculator.html';
   } else {
     alert('Invalid username or password!');
   }

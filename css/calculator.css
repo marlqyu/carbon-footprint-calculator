@@ -34,8 +34,8 @@ body {
     box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.2);
 }
 .zalivka{
-    width: 1920px;
+    width: 300000px;
     height: 700px;
     padding-top: 1200px;
-    background: /*linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);*/
+    background: red/*linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);*/
 }
