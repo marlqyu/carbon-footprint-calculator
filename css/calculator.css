@@ -1,0 +1,23 @@
+.top {
+    width: 1920px;
+    height: 1200px !important;
+    background-image: url("carbon-footprint-calculator/img/grass.png") !important;
+    background-size: cover !important;
+    position: relative !important;
+}
+
+.top::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%) !important;
+    z-index: -1 !important;
+}
+.grass {
+    background-image: url("carbon-footprint-calculator/img/grass.png");
+    background-size: cover;
+    z-index: 1;
+}

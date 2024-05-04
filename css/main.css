@@ -110,7 +110,7 @@ body {
 }
 
 .modal {
-	display: none;
+	display: none; /* This line hides the modal initially */
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -118,24 +118,23 @@ body {
 	width: 60%;
 	height: 90%;
 	overflow: auto;
-	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 40%;
+	margin-top: 30%;
 	margin-left: 50%;
 }
 
 .modal-content {
 	background-color: #fefefe;
 	margin: auto;
-	padding: 20px;
+	padding: 1%;
 	border: 1px solid #888;
 	color: forestgreen;
 	width: 50%;
 }
 
 .close {
-	margin-left: 100%;
+	margin-left: 95%;
 }
 
 .modal-content form {

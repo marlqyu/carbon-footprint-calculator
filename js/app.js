@@ -34,6 +34,17 @@ document.getElementById('registerForm').addEventListener('submit', function(even
   var username = document.getElementById('newUsername').value;
   var password = document.getElementById('newPassword').value;
 
+  // Form validation
+  if (!username || !password) {
+    alert('All fields are required!');
+    return;
+  }
+
+  if (password.length < 8) {
+    alert('Password must be at least 8 characters long!');
+    return;
+  }
+
   // Check if the username already exists
   if (localStorage.getItem(username)) {
     alert('Username already exists!');
@@ -50,6 +61,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   event.preventDefault();
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
+
+  // Form validation
+  if (!username || !password) {
+    alert('All fields are required!');
+    return;
+  }
 
   // Check if the entered password matches the stored password
   if (password === localStorage.getItem(username)) {
