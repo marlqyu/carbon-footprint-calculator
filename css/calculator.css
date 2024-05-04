@@ -1,41 +1,42 @@
 body {
+    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
     overflow-x: hidden;
-    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%) !important;
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    overflow-x: hidden;
+    overscroll-behavior: none;
 }
-
-.sky, .mountain, .grass {
-    position: absolute !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin-left: -10px;!important;
-}
-
 .sky img {
-    z-index: 1 !important;
-    margin-top: -300px !important;
+    position: absolute;
+    top: -400px;
 }
 
 .mountain img {
-    z-index: 2 !important;
-    margin-top: 164px !important;
+    position: absolute;
+    top: 464px;
 }
 
 .grass img {
-    z-index: 3 !important;
-    margin-top: 468px !important;
+    position: absolute;
+    top: 768px;
+    height: 926px;
 }
-.main-content {
-    background: rgba(11, 29, 38, 1);
+.smooth-gradient {
+    position: absolute;
     width: 1920px;
-    height: 4600px;
-    top: -512px;
-    left: -720px;
-    margin-left: -10px;!important;
-    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.2);
-}
-.zalivka{
-    width: 300000px;
     height: 700px;
-    padding-top: 1200px;
-    background: red/*linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);*/
+    top: 1200px;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+    opacity: 1; /* make the gradient visible */
+}
+.sky img, .mountain img, .grass img, .smooth-gradient, .red-bottom {
+    left: 0;
+}
+.main_content {
+    position: absolute;
+    width: 100%;
+
+    top: 1900px; /* position it under the smooth gradient */
+    background: red;
 }

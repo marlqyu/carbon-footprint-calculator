@@ -1,3 +1,6 @@
+body{
+	overscroll-behavior: none;
+}
 @media screen and (min-width: 894px) {
 	* {
 		margin: 0;
