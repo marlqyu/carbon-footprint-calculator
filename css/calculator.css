@@ -6,7 +6,36 @@ body {
     height: 400px;
     overflow-x: hidden;
     overscroll-behavior: none;
+    color: white;
 }
+.blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.63);
+    opacity: 0.5;
+    z-index: 2000;
+}
+.logo-container {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    z-index: 1000;
+}
+.logo-container img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+}
+.mountain {
+    transform: translateY(-200px);
+}
+
+.grass {
+    transform: translateY(-200px);
+}
+
 .sky img {
     position: absolute;
     top: -400px;
@@ -29,6 +58,7 @@ body {
     top: 1200px;
     background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
     opacity: 1; /* make the gradient visible */
+    transform: translateY(-200px);
 }
 .sky img, .mountain img, .grass img, .smooth-gradient, .red-bottom {
     left: 0;
@@ -36,7 +66,8 @@ body {
 .main_content {
     position: absolute;
     width: 100%;
-
+    transform: translateY(-200px);
     top: 1900px; /* position it under the smooth gradient */
-    background: red;
+    background: #0b1d26;
+    color: white;
 }
