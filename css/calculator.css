@@ -8,13 +8,22 @@ body {
     overscroll-behavior: none;
     color: white;
 }
+@font-face {
+    font-family: kamerik-3d;
+    src: url(../fonts/kamerik205-heavy.woff2);
+    font-weight: 900;
+}
+@font-face {
+    font-family: merriweather-italic-3d;
+    src: url(../fonts/merriweather-regular-italic.woff2);
+}
 .blackout {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.63);
+    background-color: rgba(0, 0, 0, 0.49);
     opacity: 0.5;
     z-index: 2000;
 }
