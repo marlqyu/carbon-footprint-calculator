@@ -80,3 +80,26 @@ body {
     background: #0b1d26;
     color: white;
 }
+body {
+    background-attachment: fixed; /* This will make the background fixed */
+}
+
+.main_content {
+    width: 100%;
+    background: #0b1d26;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -150px;
+    padding-right: -150px;
+    margin-top: -100px;
+}
+.main_content {
+    height: 50%; /* Adjust as needed */
+}
+
+.carbon-calculator {
+    height: 100%; /* Adjust as needed */
+    border: none;
+}

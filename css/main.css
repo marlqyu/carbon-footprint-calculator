@@ -196,6 +196,9 @@ body{
 		color: white;
 
 	}
+	#submit-login, #submit-register {
+    border-radius: 5px; /* Adjust as needed */
+}
 }
 @media screen and (min-width: 894px) {
 
