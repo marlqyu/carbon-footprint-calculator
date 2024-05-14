@@ -57,14 +57,14 @@ body {
 
 .grass img {
     position: absolute;
-    top: 768px;
+    top: 708px;
     height: 926px;
 }
 .smooth-gradient {
     position: absolute;
     width: 1920px;
     height: 700px;
-    top: 1200px;
+    top: 750px;
     background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
     opacity: 1; /* make the gradient visible */
     transform: translateY(-200px);
@@ -76,7 +76,7 @@ body {
     position: absolute;
     width: 100%;
     transform: translateY(-200px);
-    top: 1900px; /* position it under the smooth gradient */
+    top: 1550px; /* position it under the smooth gradient */
     background: #0b1d26;
     color: white;
 }
@@ -103,3 +103,9 @@ body {
     height: 100%; /* Adjust as needed */
     border: none;
 }
+.text{
+    width: 75%;
+    margin-top: 25%;
+    margin-left: 7%;
+    font-size: 20px;
+    font-family: 'merriweather-italic-3d', sans-serif;}

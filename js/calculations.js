@@ -9,4 +9,3 @@ window.addEventListener('scroll', function() {
     // Update the position of the sky
     sky.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
 });
-
